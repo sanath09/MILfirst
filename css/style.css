@@ -1,0 +1,582 @@
+/* Generic Styles */
+.gridLayout{
+    margin: auto;
+    max-width: 1280px;
+}
+
+.gridContainer{
+    width: 100%;
+}
+
+.clearFix{
+    overflow: auto;
+}
+
+.horizontalAlign{
+    display: inline-block;
+}
+
+.verticalMid{
+    vertical-align: middle;
+}
+
+.centerAlign{
+    align-items: center;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.paddingTopBottomS{
+    padding: 10px 0px;
+}
+
+/* Body Background */
+.bodyImg{
+    background: url('./../assets/img/bg-sierra-copy-2.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header Styles */
+.headBG{
+    width: 100%;
+    align-items: center;
+    background-color: #495965;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.hamburgerMenu{
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    /* display: none; */
+    margin: 4px 0;
+}
+
+.headImg{
+    border-bottom: solid 2px transparent;
+    margin: auto 10px;
+    padding: 5px;
+}
+
+.headImg:active{
+    border-bottom: solid 2px #ffffff;
+}
+
+/* Body Styles */
+.bodyBG{
+    /* background-image: url('./../assets/img/bg-sierra-copy-2.png'); */
+    /* background: url('./../assets/img/bg-sierra-copy-2.png') no-repeat center center fixed;
+    background-size: cover; */
+    padding: 10px 60px;
+}
+
+.profileBar{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchBar{
+    width: 500px;
+    height: 45px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.3;
+    margin: auto 5px;
+    padding: 10px;
+}
+
+.seachText{
+    opacity: 0.5;
+    font-family: 'Roboto';
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.searchImg{
+    margin: 5px 0px;
+}
+.profileInfo{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+}
+
+#profilePic{
+    /* background-color: #ffffff; */
+    width: 60px;
+    border-radius: 50%;
+    /* margin: 5px; */
+    padding: 15px;
+}
+
+#profileName{
+    color: #bcbcbc;
+    font-family: 'Roboto-Bold';
+    font-size: 16px;
+}
+
+.profileLogInfo{
+    color: #bcbcbc;
+    font-family: 'Roboto';
+    font-size: 10px;
+    padding: 0px 5px;
+}
+
+#profileLogInfo{
+    color: #bcbcbc;
+    font-family: 'Roboto';
+    font-size: 10px;
+    padding: 0px 5px;
+}
+
+.profLogOutDiv{
+    width: 1px; 
+    height: 35px; 
+    background-color: #ffffff; 
+    margin: auto 5px;
+}
+
+.logOutButton{
+    background-color: #00a8f6;
+    border: solid 1.2px transparent;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 12px;
+    margin: auto 5px;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+/* Display for the different divisions */
+.bannerDisplay{
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+
+.leftDivMain{
+    flex: 3;
+    /* margin: 5px; */
+}
+
+.rightDivMain{
+    flex: 1;
+    /* margin: 5px; */
+}
+
+/* The main big banner with account balance and recent transactions */
+.accOverview{
+    height: 50%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 10px;
+}
+
+.accLeftDiv{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.accOverviewDropDown{
+    /* width: 100%; */
+    appearance: none;
+    border-radius: 5px;
+    background: url('./../assets/img/arrow-down-grey.png') no-repeat right;
+    background-color: #fbfbfb;
+    background-size: 10px 6px;
+    border: solid 1px #d8d8d8;
+    color: #4a4a4a;
+    font: 12px 'Roboto';
+    margin: 10px;
+    padding: 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.balanceTrans{
+    /* margin: 10px; */
+    padding: 15px;
+}
+
+.availBal{
+    font: 12px 'Roboto';
+}
+
+.balFig{
+    color: #0871f4;
+    font: 32px 'Roboto-Light';
+}
+
+.balDate{
+    color: #999999;
+    font: 12px 'Roboto';
+}
+
+.transLink{
+    color: #0871f4;
+    font: 10px 'Roboto-Bold';
+    text-decoration: none;
+}
+
+.transLinkDiv{
+    width: 1px; 
+    height: 18px; 
+    background-color: #dddddd; 
+    display: inline-block;
+    margin: auto 5px;
+}
+
+.accRightDiv{
+    flex: 1;
+}
+
+/* Vertical scrollview of recent transcations */
+.recentTransBlock{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 40px;
+    padding: 10px 30px;
+}
+
+.recentTrans{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0px;
+}
+
+.greenDot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #7ed321;
+    margin: 10px;
+}
+
+.redDot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ed3a51;
+    margin: 10px;
+}
+.recentTransDate{
+    color: #4a4a4a;
+    font: 12px 'Roboto';
+}
+
+.recentTransDesc{
+    color: #4a4a4a;
+    font: 12px 'Roboto-Bold';
+}
+
+.recentTransAmt{
+    color: #0871f4;
+    font: 12px 'Roboto';
+}
+
+.recentTransScroll{
+    align-self: center;
+    cursor: pointer;
+}
+
+.leftBottomDivMain{
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Form for quick fund transfer */
+.quickPay{
+    /* width: 36%; */
+    background-color: #ffffff;
+    border-radius: 5px;
+    flex: 1;
+    margin: 5px;
+    padding: 5px 15px;
+}
+
+.quickPayText{
+    color: #000000;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin: 10px 0px;
+}
+
+.quickPayForm{
+    margin: 0px 0px;
+}
+
+.quickPayDropDown{
+    width: 100%;
+    appearance: none;
+    background: url('./../assets/img/arrow-down-grey.png') no-repeat 80px;
+    background-size: 12px 6px;
+    border: none;
+    border-bottom: 1px solid #9b9b9b;
+    font-family: 'Heebo';
+    font-size: 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.quickPayInfo{
+    color: #737373;
+    font-family: 'Heebo';
+    font-size: 10px;
+}
+
+.quickPayAlign{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quickPayTextEntry{
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #9b9b9b;
+    font-family: 'Heebo';
+    font-size: 15px;
+}
+
+.btnTransfer{
+    /* width: 50%; */
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: solid 1px #0871f4;
+    color: #0871f4;
+    font-family: Heebo;
+    font-size: 12px;
+    padding: 5px 20px;
+    /* text-align: center; */
+}
+
+/* Ad for the bank with how we can help you */
+.bankAd{
+    /* width: 64%; */
+    background: url('./../assets/img/banner-copy-5@3x.png') no-repeat center center;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    flex: 2;
+    margin: 5px;
+}
+
+/* Account summary division with the pie chart */
+.accSummary{
+    height: 50%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 10px;
+}
+
+.accSummaryText{
+    font: 16px 'Heebo';
+    margin: 10px;
+}
+
+.accSummaryDropDown{
+    width: 70px;
+    appearance: none;
+    background: url('./../assets/img/arrow-down-grey.png') no-repeat right;
+    background-size: 10px 8px;
+    border: none;
+    border-bottom: 1px solid #0871f4;
+    font-family: 'Roboto';
+    font-size: 10px;
+    margin: 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.accSummaryPieSlide{
+    height: 160px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.piePrev, .pieNext{
+    cursor: pointer;
+}
+
+.accSummaryPieContainer{
+    width: 1200px;
+    height: 160px;
+    display: inline-block;
+    position: absolute;
+    /* display: flex; */
+    /* display: none; */
+}
+
+.accSummaryPieChart{
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    margin: 20px;
+    padding: 0px 20px;
+    transition: all 2s ease;
+}
+
+.accSummaryLegends{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0px 20px;
+}
+
+.accSummaryLegendBlock{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+.accSummaryLegendText{
+    font-family: 'Heebo';
+    font-size: 8px;
+    color: #9b9b9b;
+    margin: auto 5px auto auto;
+}
+
+.accSummaryDotsLB{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #01c5dd;
+    margin: 5px;
+}
+
+.accSummaryDotsY{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffb822;
+    margin: 5px;
+}
+
+.accSummaryDotsM{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #7169cb;
+    margin: 5px;
+}
+
+.accSummaryDotsP{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #e0516b;
+    margin: 5px;
+}
+
+.accSummaryDotsDB{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #787f9a;
+    margin: 5px;
+}
+
+/* User defined widget box selector */
+.addWidget{
+    width: 280px;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+}
+/* Small shortcuts which are user defined */
+.widgetDisplay{
+    /* background-color: #000000; */
+    /* border-radius: 5px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* margin: 5px; */
+    padding: 5px;
+}
+
+.widgetBox{
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    background-color: #46ab99;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.widgetText{
+    font-family: 'Roboto';
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.widgetTextAdd{
+    font-family: 'Roboto';
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Bottom square */
+.bottomSquare{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.bottomSquareLeft{
+    width: 20px;
+    height: 20px;
+    background-color: #495965;
+    margin: 5px;
+}
+
+.bottomSquareMid{
+    width: 20px;
+    height: 20px;
+    background-color: #00a8f6;
+    margin: 5px;
+}
+
+.bottomSquareRight{
+    width: 20px;
+    height: 20px;
+    background-color: #46ab99;
+    margin: 5px;
+}
+
+.bottomBranding{
+    font: 12px 'Roboto';
+    color: #ffffff;
+    text-align: center;
+}

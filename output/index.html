@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Catamera</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./../css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./../css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./../css/fonts.css" />
+
+    <script src="./../script/horiScroll.js"></script>
+    <script src="./../script/jsonLoad.js"></script>
+
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    
+    <section class="bodyImg gridContainer">
+        <header class="headBG gridLayout">
+            <!-- Hamburger Menu --> 
+            <div>
+                <div class="hamburgerMenu"></div>
+                <div class="hamburgerMenu"></div>
+                <div class="hamburgerMenu"></div>
+            </div>
+            <!-- Side icons -->
+            <div>
+                <img class="headImg" src="./../assets/img/bell.png">
+                <img class="headImg" src="./../assets/img/bell.png">
+                <img class="headImg" src="./../assets/img/bell.png">
+            </div>
+        </header>
+
+        <main class="bodyBG gridContainer">
+        
+            <!-- Profile and Search Bar -->
+            <section class="profileBar gridLayout">
+
+                <!-- Search Bar -->
+                <div class="searchBar">
+                    <p class="seachText">I WANT TO...</p>
+                    <img class="searchImg" src="./../assets/img/bell.png">
+                </div>
+                
+                <!-- Profile Info -->
+                <div class="profileInfo">
+                    <div class="centerAlign">
+                        <img id="profilePic" src="./../assets/img/face.jpg">
+                        <div>
+                            <p id="profileName"></p>
+                            <p class="profileLogInfo">Last login <span id="profileLogInfo">9:35 am 20/03/2016</span></p>
+                        </div>
+                    </div>
+                    <hr class="profLogOutDiv">
+                    <button class="logOutButton">LOG OUT</button>
+                </div>
+            </section>
+
+            <!-- Banner Display -->
+            <section class="bannerDisplay gridLayout">
+                <div class="leftDivMain">
+
+                    <!-- Overview of Account -->
+                    <div class="accOverview">
+                        <div class="accLeftDiv">
+
+                            <!-- Account Type Dropdown -->
+                            <select class="accOverviewDropDown">
+                                <option>PERSONAL CHECKING *3456</option>
+                            </select>
+
+                            <!-- Account Balance -->
+                            <div class="balanceTrans">
+                                <div class="paddingTopBottomS">
+                                    <p class="availBal">Available Balance</p>
+                                    <p class="balFig">$2346.67</p>
+                                    <p class="balDate">AS OF 03/02/2016</p>
+                                </div>
+
+                                <div class="paddingTopBottomS centerAlign">
+                                    <a class="transLink" href="#">VIEW TRANSACTIONS</a>
+                                    <hr class="transLinkDiv">
+                                    <a class="transLink" href="#">MAKE A TRANSFER</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accRightDiv">
+
+                            <!-- Recent Transaction Scrollview -->
+                            <div class="recentTransBlock">
+
+                                <div class="recentTrans">
+                                    <div class="greenDot"></div>
+                                    <div>
+                                        <p class="recentTransDate">09/01</p>
+                                        <p class="recentTransDesc">Interest Payment very long transaction des…</p>
+                                        <p class="recentTransAmt">$150.00</p>
+                                    </div>
+                                </div>
+                                <div class="recentTrans">
+                                    <span class="redDot"></span>
+                                    <div>
+                                        <p class="recentTransDate">09/22</p>
+                                        <p class="recentTransDesc">Regular Payment - CHK *3456</p>
+                                        <p class="recentTransAmt">$150,000,000.00</p>
+                                    </div>
+                                </div>
+                                <div class="recentTrans">
+                                        <span class="redDot"></span>
+                                        <div>
+                                            <p class="recentTransDate">09/01</p>
+                                            <p class="recentTransDesc">Regular Payment - CHK *3456</p>
+                                            <p class="recentTransAmt">$150.00</p>
+                                        </div>
+                                </div>
+                                <div class="recentTrans">
+                                        <span class="redDot"></span>
+                                        <div>
+                                            <p class="recentTransDate">09/01</p>
+                                            <p class="recentTransDesc">Interest Payment</p>
+                                            <p class="recentTransAmt">$0.01</p>
+                                        </div>
+                                </div>
+                                <img class="recentTransScroll" src="./../assets/img/arrow-down-grey.png"> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="leftBottomDivMain">
+
+                        <!-- Quick Pay Form -->
+                        <div class="quickPay">
+
+                            <p class="quickPayText">QUICK PAY</p>
+                            <form class="quickPayForm">
+
+                                <div class="paddingTopBottomS">
+                                    <p class="quickPayInfo">From Account</p>
+                                    <select class="quickPayDropDown">
+                                        <option value="account">Personal Chec… -*3456($2,346.67)</option>
+                                    </select>
+                                </div>
+
+                                <div class="paddingTopBottomS">
+                                    <p class="quickPayInfo">To Account</p>
+                                    <select class="quickPayDropDown">
+                                        <option value="account">Jhon - *1234</option>
+                                    </select>
+                                </div>
+
+                                <div class="paddingTopBottomS quickPayAlign">
+                                    <div>
+                                        <p class="quickPayInfo">Amount</p>
+                                        <input type="text" class="quickPayTextEntry" placeholder="$">
+                                    </div>
+                                    <input type="submit" class="btnTransfer" value="TRANSFER">
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <!-- Bank Ad Banner -->
+                        <div class="bankAd"></div>
+                    </div>
+                </div>
+
+                <div class="rightDivMain">
+
+                    <!-- Summary of Account -->
+                    <div class="accSummary">
+
+                        <!-- Heading with title and date -->
+                        <div class="centerAlign">
+                            <p class="accSummaryText">SPENDING</p>
+                            <select class="accSummaryDropDown">
+                                <option value="account">APR 2018</option>
+                            </select>
+                        </div>
+
+                        <!-- Pie chart -->
+                        <div class="accSummaryPieSlide">
+                            <img class="piePrev" onclick="plusSlides(-1)" src="./../assets/img/arrow-left.png">
+
+                            <div class="accSummaryPieContainer">
+                                <div class="accSummaryPieChart">
+                                    <img class="" src="./../assets/img/pieChart.png">
+                                </div>
+                                <div class="accSummaryPieChart">
+                                    <img class="" src="./../assets/img/banner-copy-5.png">
+                                </div>
+                                <div class="accSummaryPieChart">
+                                    <img class="" src="./../assets/img/bg-sierra-copy-2@3x.png">
+                                </div>
+                            </div>
+
+                            <img class="pieNext" onclick="plusSlides(1)" src="./../assets/img/arrow-right.png">
+                        </div>
+
+                        <!-- Graph legend -->
+                        <div class="accSummaryLegends">
+                            <div class="centerAlign">
+                                <div class="accSummaryDotsLB"></div>
+                                <p class="accSummaryLegendText">Mortgage</p>
+                            </div>
+                            <div class="centerAlign">
+                                <div class="accSummaryDotsY"></div>
+                                <p class="accSummaryLegendText">Travel</p>
+                            </div>
+                            <div class="centerAlign">
+                                <div class="accSummaryDotsLB"></div>
+                                <p class="accSummaryLegendText">Bills</p>
+                            </div>
+                            <div class="centerAlign">
+                                <div class="accSummaryDotsM"></div>
+                                <p class="accSummaryLegendText">Groceries</p>
+                            </div>
+                            <div class="centerAlign">
+                                <div class="accSummaryDotsP"></div>
+                                <p class="accSummaryLegendText">Health</p>
+                            </div>
+                            <div class="centerAlign">
+                                <div class="accSummaryDotsDB"></div>
+                                <p class="accSummaryLegendText">Others</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Chosen Widgets -->
+                    <ul class="widgetDisplay">
+                        <li class="widgetBox">
+                            <p class="widgetText">FUND TRANSFER</p>
+                        </li>
+                        <li class="widgetBox">
+                                <p class="widgetText">PAY BILLS</p>
+                        </li>
+                        <li class="widgetBox">
+                                <p class="widgetText">CREDIT CARDS</p>
+                        </li>
+                        <li class="widgetBox">
+                                <p class="widgetTextAdd">+</p>
+                        </li>
+                    </ul>
+
+                    <div class="addWidget"></div>
+                </div>
+            </section>
+
+            <!-- Bottom square and branding -->
+            <section class="bottomSquare">
+                <div class="bottomSquareLeft"></div>
+                <div class="bottomSquareMid"></div>
+                <div class="bottomSquareRight"></div>
+            </section>
+            <p class="bottomBranding">© 2016 MOONRAFT INNOVATION LABS, ALL RIGHTS RESERVED</p>
+        </main>
+    </section>
+</body>
+</html>
