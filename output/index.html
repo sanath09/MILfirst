@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,16 +12,14 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./../css/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./../css/fonts.css" />
 
-    <script src="./../script/horiScroll.js"></script>
-    <script src="./../script/jsonLoad.js"></script>
-
     <!-- <script src="main.js"></script> -->
 </head>
-<body>
-    
+
+<body onload="loadProfile()">
+
     <section class="bodyImg gridContainer">
         <header class="headBG gridLayout">
-            <!-- Hamburger Menu --> 
+            <!-- Hamburger Menu -->
             <div>
                 <div class="hamburgerMenu"></div>
                 <div class="hamburgerMenu"></div>
@@ -35,7 +34,7 @@
         </header>
 
         <main class="bodyBG gridContainer">
-        
+
             <!-- Profile and Search Bar -->
             <section class="profileBar gridLayout">
 
@@ -44,14 +43,16 @@
                     <p class="seachText">I WANT TO...</p>
                     <img class="searchImg" src="./../assets/img/bell.png">
                 </div>
-                
+
                 <!-- Profile Info -->
                 <div class="profileInfo">
                     <div class="centerAlign">
                         <img id="profilePic" src="./../assets/img/face.jpg">
                         <div>
                             <p id="profileName"></p>
-                            <p class="profileLogInfo">Last login <span id="profileLogInfo">9:35 am 20/03/2016</span></p>
+                            <p class="profileLogInfo">Last login
+                                <span id="profileLogInfo"></span>
+                            </p>
                         </div>
                     </div>
                     <hr class="profLogOutDiv">
@@ -76,8 +77,8 @@
                             <div class="balanceTrans">
                                 <div class="paddingTopBottomS">
                                     <p class="availBal">Available Balance</p>
-                                    <p class="balFig">$2346.67</p>
-                                    <p class="balDate">AS OF 03/02/2016</p>
+                                    <p id="balFig">$</p>
+                                    <p class="balDate">AS OF <span id="balDate">03/02/2016</span></p>
                                 </div>
 
                                 <div class="paddingTopBottomS centerAlign">
@@ -91,7 +92,7 @@
 
                             <!-- Recent Transaction Scrollview -->
                             <div class="recentTransBlock">
-
+                                <div class="recentTransList">
                                 <div class="recentTrans">
                                     <div class="greenDot"></div>
                                     <div>
@@ -101,7 +102,7 @@
                                     </div>
                                 </div>
                                 <div class="recentTrans">
-                                    <span class="redDot"></span>
+                                    <div class="redDot"></div>
                                     <div>
                                         <p class="recentTransDate">09/22</p>
                                         <p class="recentTransDesc">Regular Payment - CHK *3456</p>
@@ -109,22 +110,39 @@
                                     </div>
                                 </div>
                                 <div class="recentTrans">
-                                        <span class="redDot"></span>
-                                        <div>
-                                            <p class="recentTransDate">09/01</p>
-                                            <p class="recentTransDesc">Regular Payment - CHK *3456</p>
-                                            <p class="recentTransAmt">$150.00</p>
-                                        </div>
+                                    <div class="redDot"></div>
+                                    <div>
+                                        <p class="recentTransDate">09/01</p>
+                                        <p class="recentTransDesc">Regular Payment - CHK *3456</p>
+                                        <p class="recentTransAmt">$150.00</p>
+                                    </div>
                                 </div>
                                 <div class="recentTrans">
-                                        <span class="redDot"></span>
-                                        <div>
-                                            <p class="recentTransDate">09/01</p>
-                                            <p class="recentTransDesc">Interest Payment</p>
-                                            <p class="recentTransAmt">$0.01</p>
-                                        </div>
+                                    <div class="redDot"></div>
+                                    <div>
+                                        <p class="recentTransDate">09/01</p>
+                                        <p class="recentTransDesc">Interest Payment</p>
+                                        <p class="recentTransAmt">$0.01</p>
+                                    </div>
                                 </div>
-                                <img class="recentTransScroll" src="./../assets/img/arrow-down-grey.png"> 
+                                <div class="recentTrans">
+                                    <div class="redDot"></div>
+                                    <div>
+                                        <p class="recentTransDate">09/01</p>
+                                        <p class="recentTransDesc">Interest Payment</p>
+                                        <p class="recentTransAmt">$0.01</p>
+                                    </div>
+                                </div>
+                                <div class="recentTrans">
+                                    <div class="redDot"></div>
+                                    <div>
+                                        <p class="recentTransDate">09/01</p>
+                                        <p class="recentTransDesc">Regular Payment - CHK *3456</p>
+                                        <p class="recentTransAmt">$150.00</p>
+                                    </div>
+                                </div>
+                                </div>
+                                <img class="recentTransScroll" onclick="plusSlidesVerti(1)" src="./../assets/img/arrow-down-grey.png">
                             </div>
                         </div>
                     </div>
@@ -234,13 +252,13 @@
                             <p class="widgetText">FUND TRANSFER</p>
                         </li>
                         <li class="widgetBox">
-                                <p class="widgetText">PAY BILLS</p>
+                            <p class="widgetText">PAY BILLS</p>
                         </li>
                         <li class="widgetBox">
-                                <p class="widgetText">CREDIT CARDS</p>
+                            <p class="widgetText">CREDIT CARDS</p>
                         </li>
                         <li class="widgetBox">
-                                <p class="widgetTextAdd">+</p>
+                            <p class="widgetTextAdd">+</p>
                         </li>
                     </ul>
 
@@ -257,5 +275,10 @@
             <p class="bottomBranding">© 2016 MOONRAFT INNOVATION LABS, ALL RIGHTS RESERVED</p>
         </main>
     </section>
+
+    <script src="./../script/vertiScroll.js"></script>
+    <script src="./../script/horiScroll.js"></script>
+    <script src="./../script/jsonLoad.js"></script>
 </body>
+
 </html>

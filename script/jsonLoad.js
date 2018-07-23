@@ -1,7 +1,7 @@
-function loadCustomer(e) {
+function loadProfile() {
     const xhr = new XMLHttpRequest();
   
-    xhr.open('GET', 'profileInfo.json', true);
+    xhr.open('GET', './../json/profileInfo.json', true);
   
     xhr.onload = function(){
       if(this.status === 200) {
@@ -18,7 +18,11 @@ function loadCustomer(e) {
         //   </ul>
         // `;
   
-        document.getElementById('profileName').innerHTML = `${person.name}`;
+        document.getElementById('profileName').innerHTML = `${person[0].name}`;
+        document.getElementById('profilePic').innerHTML = `${person[0].img}`;
+        document.getElementById('profileLogInfo').innerHTML = `${person[0].login}`;
+        document.getElementById('balFig').innerHTML = `${person[0].balance}`;
+        document.getElementById('balDate').innerHTML = `${person[0].balDate}`;
       }
     }
   

@@ -121,6 +121,7 @@
     color: #bcbcbc;
     font-family: 'Roboto-Bold';
     font-size: 16px;
+    padding: 0px 5px;
 }
 
 .profileLogInfo{
@@ -217,7 +218,7 @@
     font: 12px 'Roboto';
 }
 
-.balFig{
+#balFig{
     color: #0871f4;
     font: 32px 'Roboto-Light';
 }
@@ -247,18 +248,35 @@
 
 /* Vertical scrollview of recent transcations */
 .recentTransBlock{
+    height: 100%;
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     margin: auto 40px;
-    padding: 10px 30px;
+    overflow: hidden;
+    padding: 0px 30px;
+    position: relative;
+}
+
+.recentTransList{
+    width: 350px;
+    height: 1000px;
+    /* align-items: center;
+    display: flex;
+    flex-direction: column; */
+    /* justify-content: space-between; */
+    position: absolute;
+    top: 10px;
 }
 
 .recentTrans{
+    width: 300px;
+    height: 50px;
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    margin: 15px auto;
     padding: 8px 0px;
 }
 
@@ -425,19 +443,21 @@
 .accSummaryPieContainer{
     width: 1200px;
     height: 160px;
-    display: inline-block;
+    align-items: center;
+    display: flex;
+    /* display: inline-block; */
+    justify-content: space-between;
+    padding: 20px;
     position: absolute;
-    /* display: flex; */
     /* display: none; */
 }
 
 .accSummaryPieChart{
     width: 160px;
     height: 160px;
-    display: inline-block;
+    /* display: inline-block; */
     margin: 20px;
-    padding: 0px 20px;
-    transition: all 2s ease;
+    padding: 0px 10px;
 }
 
 .accSummaryLegends{
